@@ -13,6 +13,10 @@ export class UtilsServiceMock {
 		return 'avatar';
 	}
 
+	getOpenViduLogo(): string {
+		return 'logo';
+	}
+
 	handlerScreenShareError(error: any) {}
 
 	getOpenviduLayoutOptions(): OpenViduLayoutOptions {

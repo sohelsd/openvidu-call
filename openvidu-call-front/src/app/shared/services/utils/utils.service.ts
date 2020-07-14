@@ -47,6 +47,9 @@ export class UtilsService {
 	getOpenViduAvatar(): string {
 		return 'https://openvidu.io/img/logos/openvidu_globe_bg_transp_cropped.png';
 	}
+	getOpenViduLogo(): string {
+		return 'https://raw.githubusercontent.com/OpenVidu/openvidu-call/master/openvidu-call-front/src/assets/images/openvidu_logo.png';
+	}
 
 	handlerScreenShareError(error: any) {
 		if (error && error.name === 'SCREEN_SHARING_NOT_SUPPORTED') {

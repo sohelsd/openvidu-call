@@ -89,6 +89,16 @@ export class WebComponentComponent {
 		this.webComponent.setOvSecret(secret);
 	}
 
+	@Input()
+	set appLogoUrl(url: string) {
+		this.webComponent.setAppLogoUrl(url);
+	}
+
+	@Input()
+	set chatAvatarUrl(url: string) {
+		this.webComponent.setChatAvatarURL(url);
+	}
+
 	emitErrorEvent(event) {
 		setTimeout(() => this.error.emit(event), 20);
 	}

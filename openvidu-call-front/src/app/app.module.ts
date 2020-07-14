@@ -45,7 +45,7 @@ import { ChatComponent } from './shared/components/chat/chat.component';
 import { OpenViduVideoComponent } from './shared/components/stream/ov-video.component';
 import { DialogErrorComponent } from './shared/components/dialog-error/dialog-error.component';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
-import { ToolbarLogoComponent } from './shared/components/toolbar/logo.component';
+import { AppLogoComponent } from './shared/components/app-logo/app-logo.component';
 import { RoomConfigComponent } from './shared/components/room-config/room-config.component';
 import { WebComponentComponent } from './web-component/web-component.component';
 import { VideoRoomComponent } from './video-room/video-room.component';
@@ -76,7 +76,6 @@ import { StorageService } from './shared/services/storage/storage.service';
 		RoomConfigComponent,
 		WebComponentComponent,
 		ToolbarComponent,
-		ToolbarLogoComponent,
 		LinkifyPipe,
 		HasChatPipe,
 		HasAudioPipe,
@@ -87,7 +86,8 @@ import { StorageService } from './shared/services/storage/storage.service';
 		HasLayoutSpeakingPipe,
 		HasExitPipe,
 		TooltipListPipe,
-		FooterComponent
+		FooterComponent,
+		AppLogoComponent
 	],
 	imports: [
 		FormsModule,

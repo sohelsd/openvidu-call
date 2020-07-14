@@ -24,6 +24,7 @@ export class ToolbarComponent implements OnInit, OnDestroy {
 	@Input() isConnectionLost: boolean;
 	@Input() hasVideoDevices: boolean;
 	@Input() hasAudioDevices: boolean;
+	@Input() logoURL: string;
 	@Output() micButtonClicked = new EventEmitter<any>();
 	@Output() camButtonClicked = new EventEmitter<any>();
 	@Output() screenShareClicked = new EventEmitter<any>();
@@ -34,7 +35,6 @@ export class ToolbarComponent implements OnInit, OnDestroy {
 	private chatServiceSubscription: Subscription;
 
 	fullscreenIcon = VideoFullscreenIcon.BIG;
-	logoUrl = 'https://raw.githubusercontent.com/OpenVidu/openvidu-call/master/openvidu-call-front/src/assets/images/';
 
 	participantsNames: string[] = [];
 
@@ -59,11 +59,6 @@ export class ToolbarComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnInit() {
-		if (this.lightTheme) {
-			this.logoUrl += 'openvidu_logo_grey.png';
-			return;
-		}
-		this.logoUrl += 'openvidu_logo.png';
 	}
 
 	toggleMicrophone() {

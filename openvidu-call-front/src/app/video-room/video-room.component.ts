@@ -56,6 +56,8 @@ export class VideoRoomComponent implements OnInit, OnDestroy {
 	compact = false;
 	sidenavMode: 'side' | 'over' = 'side';
 	lightTheme: boolean;
+	logoURL: string;
+	chatAvatarURL: string;
 	showConfigRoomCard = true;
 	session: Session;
 	sessionScreen: Session;
@@ -101,6 +103,8 @@ export class VideoRoomComponent implements OnInit, OnDestroy {
 
 	async ngOnInit() {
 		this.lightTheme = this.externalConfig?.getTheme() === Theme.LIGHT;
+		this.logoURL = !!this.externalConfig && !!this.externalConfig.getAppLogoUrl() ? this.externalConfig.getAppLogoUrl() : this.utilsSrv.getOpenViduLogo();
+		this.chatAvatarURL = !!this.externalConfig && this.externalConfig.getChatAvatarURL() ? this.externalConfig.getChatAvatarURL()  : this.utilsSrv.getOpenViduAvatar();
 		this.ovSettings = !!this.externalConfig ? this.externalConfig.getOvSettings() : new OvSettingsModel();
 		this.ovSettings.setScreenSharing(this.ovSettings.hasScreenSharing() && !this.utilsSrv.isMobile());
 	}

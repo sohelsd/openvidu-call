@@ -1,0 +1,6 @@
+<div id="navSessionInfo">
+	<img id="header_img" [src]="logoURL" />
+	<div *ngIf="!compact && sessionId" [ngClass]="{'titleContent': true, 'titleContentLight': lightTheme, 'titleContentDark': !lightTheme}">
+		<span id="session-title">{{ sessionId }}</span>
+	</div>
+</div>

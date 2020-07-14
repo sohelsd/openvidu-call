@@ -27,6 +27,9 @@ export class RoomConfigComponent implements OnInit, OnDestroy {
 	private readonly USER_NICKNAME = 'openviduCallNickname';
 	@ViewChild('bodyCard') bodyCard: ElementRef;
 
+	@Input() logoURL: string;
+	@Input() lightTheme: boolean;
+	@Input() chatAvatarURL: string;
 	@Input() externalConfig: ExternalConfigModel;
 	@Input() ovSettings: OvSettingsModel;
 	@Output() join = new EventEmitter<any>();
@@ -271,7 +274,8 @@ export class RoomConfigComponent implements OnInit, OnDestroy {
 	}
 
 	private setRandomAvatar() {
-		this.randomAvatar = this.utilsSrv.getOpenViduAvatar();
+		// !Refactor
+		this.randomAvatar = this.chatAvatarURL;
 		this.oVSessionService.setAvatar(AvatarType.RANDOM, this.randomAvatar);
 		this.avatarSelected = AvatarType.RANDOM;
 	}

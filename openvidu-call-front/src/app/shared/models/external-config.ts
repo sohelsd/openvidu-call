@@ -10,6 +10,8 @@ export class ExternalConfigModel {
 	protected theme = Theme.DARK;
 	protected nickname: string;
 	protected tokens: string[];
+	protected appLogoUrl: string;
+	protected chatAvatarURL: string;
 
 	constructor() {
 		this.ovSettings = new OvSettingsModel();
@@ -70,6 +72,26 @@ export class ExternalConfigModel {
 	}
 	public setTokens(tokens: string[]) {
 		this.tokens = tokens;
+	}
+
+	public setAppLogoUrl(url: string) {
+		if (!!url) {
+			this.appLogoUrl = url;
+		}
+	}
+
+	public getChatAvatarURL() {
+		return this.chatAvatarURL;
+	}
+
+	public setChatAvatarURL(url: string) {
+		if (!!url) {
+			this.chatAvatarURL = url;
+		}
+	}
+
+	public getAppLogoUrl() {
+		return this.appLogoUrl;
 	}
 
 	public canJoinToSession(): boolean {

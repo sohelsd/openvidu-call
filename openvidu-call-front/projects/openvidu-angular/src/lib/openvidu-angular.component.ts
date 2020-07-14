@@ -43,6 +43,11 @@ export class OpenviduSessionComponent implements OnInit {
 	tokens: string[];
 	@Input()
 	theme: string;
+
+	@Input()
+	appLogoUrl: string;
+	@Input()
+	chatAvatarUrl: string;
 	@Output() sessionCreated = new EventEmitter<any>();
 	@Output() publisherCreated = new EventEmitter<any>();
 	@Output() error = new EventEmitter<any>();
@@ -70,6 +75,8 @@ export class OpenviduSessionComponent implements OnInit {
 		this.angularLibrary.setTheme(this.theme);
 		this.angularLibrary.setNickname(this.user);
 		this.angularLibrary.setTokens(this.tokens);
+		this.angularLibrary.setAppLogoUrl(this.appLogoUrl);
+		this.angularLibrary.setChatAvatarURL(this.chatAvatarUrl);
 		if (this.angularLibrary.canJoinToSession()) {
 			this.display = true;
 			return;

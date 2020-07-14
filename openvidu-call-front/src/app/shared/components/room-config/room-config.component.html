@@ -5,15 +5,11 @@
       <div class="modal-content cardContainer">
 
         <!-- Modal Header -->
-        <div class="modal-header cardHeader">
+        <div class="modal-header cardHeader" [class.cardHeaderLight]="lightTheme">
 			<div class="headerLogo">
-				<img
-					id="header_img"
-					alt="OpenVidu Logo"
-					src="https://raw.githubusercontent.com/OpenVidu/openvidu-call/master/openvidu-call-front/src/assets/images/openvidu_logo_grey.png"
-				/>
+				<app-logo [logoURL]="logoURL"></app-logo>
 			</div>
-			<h3 class="headerTitle">{{ mySessionId }}</h3>
+			<h3 class="headerTitle" [class.headerTitleLight]="lightTheme">{{ mySessionId }}</h3>
 
 			<button mat-mini-fab (click)="close()" class="closeButton" id="closeButton">
 				<mat-icon color="warn" matTooltip="Close">highlight_off</mat-icon>

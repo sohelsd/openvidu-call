@@ -1,9 +1,13 @@
 .cardHeader {
-  background-color: #cccccc;
+  background-color: #333333;
   border-radius: 14px 14px 0px 0px;
   text-align: center;
   height: 50px;
 }
+.cardHeaderLight {
+  background-color: #cccccc !important;
+}
+
 .headerLogo{
   position: absolute;
   top: 0;
@@ -14,6 +18,12 @@
 .headerTitle {
   font-size: large;
   margin: auto;
+  color: #ffffff;
+}
+
+.headerTitleLight{
+  color: #000000 !important;
+
 }
 
 .videoContainer {
