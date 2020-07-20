@@ -6,7 +6,7 @@ WORKDIR /openvidu-browser
 RUN apk add wget unzip
 
 # Download openvidu-browser from master, compile and pack it
-RUN wget "https://github.com/sohelsd/openvidu/archive/master.zip" -O openvidu-browser.zip && \
+RUN wget "https://github.com/sohelsd/openvidu-call/archive/master.zip" -O openvidu-browser.zip && \
     unzip openvidu-browser.zip openvidu-master/openvidu-browser/* && \
     rm openvidu-browser.zip && \
     mv openvidu-master/openvidu-browser/ . && \
