@@ -34,7 +34,7 @@ export class ToolbarComponent implements OnInit, OnDestroy {
 	private chatServiceSubscription: Subscription;
 
 	fullscreenIcon = VideoFullscreenIcon.BIG;
-	logoUrl = 'https://raw.githubusercontent.com/OpenVidu/openvidu-call/master/openvidu-call-front/src/assets/images/';
+	logoUrl = '/assets/images/';
 
 	participantsNames: string[] = [];
 
@@ -60,10 +60,10 @@ export class ToolbarComponent implements OnInit, OnDestroy {
 
 	ngOnInit() {
 		if (this.lightTheme) {
-			this.logoUrl += 'openvidu_logo_grey.png';
+			this.logoUrl += 'nu_grey_logo.png';
 			return;
 		}
-		this.logoUrl += 'openvidu_logo.png';
+		this.logoUrl += 'nu_logo.png';
 	}
 
 	toggleMicrophone() {

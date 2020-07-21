@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator';
+import { uniqueNamesGenerator, adjectives, colors } from 'unique-names-generator';
 
 @Component({
 	selector: 'app-home',
@@ -15,8 +15,9 @@ export class HomeComponent implements OnInit {
 	constructor(private router: Router, public formBuilder: FormBuilder) {}
 
 	ngOnInit() {
-		const randomName = uniqueNamesGenerator({ dictionaries: [adjectives, colors, animals], separator: '-', });
-		this.roomForm = new FormControl(randomName, [Validators.minLength(4), Validators.required]);
+		const randomName = uniqueNamesGenerator({ dictionaries: [adjectives, colors], separator: '-', length: 2});
+		const random5digits = Math.random().toString(36).substr(2, 5);
+		this.roomForm = new FormControl(random5digits, [Validators.minLength(4), Validators.required]);
 	}
 
 	public goToVideoCall() {

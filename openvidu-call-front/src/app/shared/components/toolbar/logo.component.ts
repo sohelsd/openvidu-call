@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
 	template: `
 		<div id="navSessionInfo">
 			<a>
-				<img id="header_img" alt="OpenVidu Logo" [src]="logoUrl" />
+				<img id="header_img" alt="Nu Logo" style="max-height: 30px;" [src]="logoUrl" />
 			</a>
 			<div *ngIf="!compact && sessionId" [ngClass]="{'titleContent': true, 'titleContentLight': lightTheme, 'titleContentDark': !lightTheme}">
 				<span id="session-title">{{ sessionId }}</span>

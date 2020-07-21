@@ -50,7 +50,7 @@ export class UserModel {
 		nickname?: string,
 	) {
 		this.connectionId = connectionId || '';
-		this.nickname = nickname || 'OpenVidu';
+		this.nickname = nickname || 'Nu';
 		this.streamManager = streamManager || null;
 	}
 
